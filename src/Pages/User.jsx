@@ -27,7 +27,7 @@ const User = () => {
                         <h2 className="text-center">Your Bought Articles</h2>
                         <div className="row">
                             {data.map((d, i) => (
-                                <div className="col-4" key={i}>
+                                <div className="col-3" key={i}>
                                     <div className="card border-secondary mb-3" style={{ maxWidth: "18rem" }}>
                                         <div className="card-header">{d.published_date}</div>
                                         <div className="card-body text-secondary">

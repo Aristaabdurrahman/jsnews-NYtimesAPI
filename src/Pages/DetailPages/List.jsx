@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { API, mostViewed } from "../../Service/Api";
+import { API } from "../../Service/Api";
 import Filter from "../../Components/Filter";
 import Detailcontent from "../../Components/Detailcontent";
 import Navbar from "../../Components/Navbar";

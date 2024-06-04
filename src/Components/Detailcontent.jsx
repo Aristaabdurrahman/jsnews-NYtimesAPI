@@ -11,19 +11,27 @@ const Detailcontent = ({ content, filter }) => {
         price = 20000
     }
 
+
+    //set array for user bought articles
+
+    let old_data = JSON.parse(localStorage.getItem('userBuy'))
+    
+    if (old_data == null) {
+        localStorage.setItem('userBuy', JSON.stringify([]))
+    }
+
     const buy = (event) => {
         const artcID = event.target.dataset.id;
         event.preventDefault()
+
         if (getcoins >= price) {
-            var buylist = []
-            buylist.push(content[artcID])
-            localStorage.setItem('userBuy', JSON.stringify(buylist))
+            old_data.push(content[artcID])
+            localStorage.setItem('userBuy', JSON.stringify(old_data))
             localStorage.setItem('coins', getcoins - price)
         } else {
             console.log("your balance not enough")
         }
     }
-    //var data = JSON.parse(localStorage.getItem("userBuy"))
 
     return (
         <>
@@ -36,37 +44,37 @@ const Detailcontent = ({ content, filter }) => {
                         <div className="col-md-9">
                             <div className="card-body">
                                 <h5 className="card-title">{c.title}</h5>
-                                <small class="text-body-secondary">Author : {c.byline}</small><br />
+                                <small className="text-body-secondary">Author : {c.byline}</small><br />
                                 {c.subsection != '' ? (
-                                    <small class="text-body-secondary">subsection : {c.subsection}</small>
+                                    <small className="text-body-secondary">subsection : {c.subsection}</small>
                                 ) : (
-                                    <small class="text-body-secondary"></small>
+                                    <small className="text-body-secondary"></small>
                                 )}
 
                                 <p className="card-text" style={{ paddingTop: "10px" }}>{c.abstract}</p>
                                 <a href={c.url} style={{ fontSize: "15px" }}>Link : {c.url}</a>
-                                <div class="d-flex" style={{ paddingTop: "20px" }}>
-                                    <div class=" flex-grow-1 mt-3">Publish date : {c.published_date}</div>
-                                    <div class="p-2 mt-2">Price : {price == 0 ? "Free" : price}</div>
-                                    <div class="p-2">
+                                <div className="d-flex" style={{ paddingTop: "20px" }}>
+                                    <div className=" flex-grow-1 mt-3">Publish date : {c.published_date}</div>
+                                    <div className="p-2 mt-2">Price : {price == 0 ? "Free" : price}</div>
+                                    <div className="p-2">
                                         <button type="submit" className="btn btn-secondary" data-id={i}
                                             onClick={buy}
                                             data-bs-toggle="modal" data-bs-target="#exampleModal"
                                         >
                                             Buy Article
                                         </button>
-                                        <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                             <div className="modal-dialog modal-dialog-centered">
                                                 <div className="modal-content">
                                                     <div className="modal-header">
                                                         <h1 className="modal-title fs-5" id="exampleModalLabel">Buy Articles Success...</h1>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                     </div>
                                                     <div className="modal-body text-center">
                                                         You haved buy article from Ny Times for {price == 0 ? "Free" : price}
                                                     </div>
                                                     <div className="modal-footer">
-                                                        <button type="button" class="btn btn-primary">Continue</button>
+                                                        <button type="button" className="btn btn-primary">Continue</button>
                                                     </div>
                                                 </div>
                                             </div>
