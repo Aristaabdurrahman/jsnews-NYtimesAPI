@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Emailed from "../Components/HomeComponent/Emailed";
 import Shared from "../Components/HomeComponent/Shared";
 import Viewed from "../Components/HomeComponent/Viewed";
-import { API, mostEmail } from "../Service/Api";
+import { API } from "../Service/Api";
 import Navbar from "../Components/Navbar";
 
 const Home = () => {

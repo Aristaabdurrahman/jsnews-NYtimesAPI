@@ -23,7 +23,7 @@ const Detailcontent = ({ content, filter }) => {
             console.log("your balance not enough")
         }
     }
-    var data = JSON.parse(localStorage.getItem("userBuy"))
+    //var data = JSON.parse(localStorage.getItem("userBuy"))
 
     return (
         <>
