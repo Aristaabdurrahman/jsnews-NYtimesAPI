@@ -1,5 +1,5 @@
 const Navbar = () => {
-    var getcoins = localStorage.getItem("coins")
+    let getcoins = localStorage.getItem("coins")
     return (
         <>
             <style>

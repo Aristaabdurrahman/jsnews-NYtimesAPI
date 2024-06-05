@@ -34,7 +34,13 @@ const Home = () => {
         <>
             <div id="landingpage">
                 <Navbar />
-                <h1>DelosNews</h1>
+                <div id="intro">
+                    <h4>
+                        Welcome to Delosnew
+                    </h4>
+                    <p>Get NY TImes most popular articles start from 0 Coins</p>
+                </div>
+                {/* <h1>DelosNews</h1> */}
             </div>
             <div className="container">
                 <div className="row">
@@ -48,9 +54,9 @@ const Home = () => {
                         <Emailed email={email} />
                     </div>
                     <hr />
-                <p className="text-center mb-4">
-                    <a href="/list-articles">Show more in Articles list page</a>
-                </p>
+                    <p className="text-center mb-4">
+                        <a href="/list-articles">Show more in Articles list page</a>
+                    </p>
                 </div>
             </div>
         </>

@@ -1,5 +1,4 @@
 const Viewed = ({ view }) => {
-    let num = 0
 
     return (
         <>

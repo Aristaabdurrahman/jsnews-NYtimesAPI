@@ -3,9 +3,9 @@ import Popup from "./Popup";
 
 const Detailcontent = ({ content, filter }) => {
 
-    var price = 0;
+    let price = 0;
     let rewards = 0;
-    var getcoins = localStorage.getItem("coins")
+    let getcoins = localStorage.getItem("coins")
 
     if (filter == 1) {
         price = 50000
