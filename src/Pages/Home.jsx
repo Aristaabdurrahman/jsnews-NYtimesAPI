@@ -36,7 +36,7 @@ const Home = () => {
                 <Navbar />
                 <div id="intro">
                     <h4>
-                        Welcome to Delosnew
+                        Welcome to Delosnews
                     </h4>
                     <p>Get NY TImes most popular articles start from 0 Coins</p>
                 </div>
