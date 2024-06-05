@@ -26,4 +26,4 @@ How to run project :
 development : 
 - http://localhost:5173/
 
-4. 
+4. Enjoy React APP!
