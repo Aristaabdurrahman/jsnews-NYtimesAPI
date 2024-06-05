@@ -9,8 +9,6 @@ import List from "./Pages/DetailPages/List.jsx";
 
 function App() {
 
- 
-
   //set starting coin of 100.000
   var getcoins = localStorage.getItem("coins")
   if (getcoins == null) {

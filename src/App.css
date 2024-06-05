@@ -13,7 +13,6 @@
   font-size: 60px;
 }
 
-a{
-  text-decoration:none;
-  color: black;
+.user-small{
+  font-size: 12px;
 }
