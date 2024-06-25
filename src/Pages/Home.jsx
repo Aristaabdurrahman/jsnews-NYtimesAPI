@@ -40,7 +40,6 @@ const Home = () => {
                     </h4>
                     <p>Get NY TImes most popular articles start from 0 Coins</p>
                 </div>
-                {/* <h1>DelosNews</h1> */}
             </div>
             <div className="container">
                 <div className="row">

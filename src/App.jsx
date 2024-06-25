@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, redirect } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import './../node_modules/bootstrap/dist/js/bootstrap.min.js'
 import './App.css'
